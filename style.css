@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    border-radius: 2rem;
+}
+
+body {
+    width: 400px;
+    height: 400px;
+    background-color: #7432ff;
+    color: white;
+    padding: 0.6rem;
+}
+
+.jokeWrapper {
+    /* margin: 0.4rem 0.6rem; */
+    border: 1.4px solid rgba(255, 255, 255, 0.303);
+    border-radius: 0.5rem;
+    padding: 0.3rem 0.6rem;
+    margin-top: 1rem;
+}
+
+.jokeWrapper h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#jokeElement {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+.spacesjip-img {
+    width: 50px;
+    height: auto;
+}
+
+.makeEffectsBtn {
+    color: #7432ff;
+    background-color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.6rem;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}

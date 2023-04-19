@@ -1,0 +1,20 @@
+{
+    "name": "ExcelSior",
+    "version": "0.0.1",
+    "description": "This is an extension to do dom manipulations in best way possible",
+    "manifest_version": 3,
+    "author": "Shehjad",
+    "background": {
+        "service_worker": "background.js"
+    },
+    "icons": {
+        "128": "extensionLogo128.png"
+    },
+    "permissions": ["storage", "activeTab", "scripting", "tabs"],
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "ExcelSior Extension"
+    },
+    "options_page": "options.html",
+    "host_permissions": ["*://*/*"]
+}
