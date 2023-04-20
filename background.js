@@ -5,15 +5,21 @@ chrome.runtime.onInstalled.addListener(() => {
 });
 
 let currentTab;
-chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+/* chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
     currentTab = tabs[0].id;
-});
+}); */
 
-chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-        currentTab = tabs[0].id;
-    });
+// Update currentTab whenever a tab is updated or activated
+chrome.tabs.onActivated.addListener(function (activeInfo) {
+    if (activeInfo.tabId !== currentTab) {
+        currentTab = activeInfo.tabId;
+    }
 });
+/* chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+    if (changeInfo.active && tabId !== currentTab) {
+        currentTab = tabId;
+    }
+}); */
 
 chrome.runtime.onMessage.addListener(async function (
     request,
